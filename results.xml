@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.332141">
+<testsuite name="api\getFeature.spec.ts" timestamp="2024-05-23T09:39:41.386Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.037" errors="0">
+<testcase name="should get all fetures" classname="api\getFeature.spec.ts" time="2.037">
+</testcase>
+</testsuite>
+</testsuites>
