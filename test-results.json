@@ -107,14 +107,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 2037,
+                  "duration": 1969,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-05-23T09:39:42.490Z",
+                  "startTime": "2024-05-23T09:47:29.248Z",
                   "attachments": []
                 }
               ],
@@ -131,8 +131,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-05-23T09:39:40.233Z",
-    "duration": 4332.141,
+    "startTime": "2024-05-23T09:47:26.654Z",
+    "duration": 4617.410000000033,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
