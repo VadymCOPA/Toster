@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.617410000000032">
-<testsuite name="api\getFeature.spec.ts" timestamp="2024-05-23T09:47:28.014Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.969" errors="0">
-<testcase name="should get all fetures" classname="api\getFeature.spec.ts" time="1.969">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="2.6368069999963044">
+<testsuite name="api\getFeature.spec.ts" timestamp="2024-05-24T10:03:06.569Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.299" errors="0">
+<testcase name="should get all fetures" classname="api\getFeature.spec.ts" time="0.299">
 </testcase>
 </testsuite>
 </testsuites>
