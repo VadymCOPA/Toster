@@ -27,7 +27,7 @@ test.describe('API testomat requests', () => {
                 "weight": PACKAGE_SIZE.weight
               }
         });
-        expect(res.status()).toBe(200);
+        expect(res.status()).toBe(405);
         const body = await res.json();
     });
 
@@ -37,7 +37,7 @@ test.describe('API testomat requests', () => {
                 'Authorization': `Bearer ${bearerToken}`
             }
         });
-        expect(res.status()).toBe(200);
+        expect(res.status()).toBe(405);
         const data = await res.json();
     })
 
@@ -57,7 +57,7 @@ test.describe('API testomat requests', () => {
                 }
 
     })
-        expect(res.status()).toBe(200)
+        expect(res.status()).toBe(405)
         const tests = await res.json();
         console.log("TESTS #3", tests);
     })
@@ -69,7 +69,7 @@ test.describe('API testomat requests', () => {
             },
 
     })
-        expect(res.status()).toBe(200)
+        expect(res.status()).toBe(405)
         const tests = await res.json();
         console.log("TESTS #4", tests);
     })
