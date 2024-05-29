@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Projects\\FermNode\\playwright.config.js",
-    "rootDir": "c:/Projects/FermNode/tests",
+    "configFile": "C:\\Projects\\FermNode\\playwright.config.js",
+    "rootDir": "C:/Projects/FermNode/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -39,13 +39,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Projects/FermNode/test-results",
+        "outputDir": "C:/Projects/FermNode/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Projects/FermNode/tests",
+        "testDir": "C:/Projects/FermNode/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -53,13 +53,13 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Projects/FermNode/test-results",
+        "outputDir": "C:/Projects/FermNode/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "firefox",
         "name": "firefox",
-        "testDir": "c:/Projects/FermNode/tests",
+        "testDir": "C:/Projects/FermNode/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -67,13 +67,13 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Projects/FermNode/test-results",
+        "outputDir": "C:/Projects/FermNode/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
-        "testDir": "c:/Projects/FermNode/tests",
+        "testDir": "C:/Projects/FermNode/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -89,14 +89,14 @@
   },
   "suites": [
     {
-      "title": "api\\getFeature.spec.ts",
-      "file": "api/getFeature.spec.ts",
+      "title": "otherRegTest.spec.ts",
+      "file": "otherRegTest.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "should get all fetures",
-          "ok": true,
+          "title": "test succeed auth",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -107,35 +107,147 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "status": "passed",
-                  "duration": 299,
-                  "errors": [],
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30070,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Projects\\FermNode\\pages\\main.page.ts",
+                        "column": 21,
+                        "line": 22
+                      },
+                      "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  \u001b[2m- navigating to \"https://test.dev.copaltd.services/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\main.page.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://test.dev.copaltd.services/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Добре'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\n\u001b[2m    at FermMainPage.goto (C:\\Projects\\FermNode\\pages\\main.page.ts:22:21)\u001b[22m\n\u001b[2m    at C:\\Projects\\FermNode\\tests\\otherRegTest.spec.ts:6:22\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-05-24T10:03:07.478Z",
+                  "startTime": "2024-05-24T13:32:36.442Z",
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "6a9245b9f78402b3f699-aaf79f58a67df65bde78",
-          "file": "api/getFeature.spec.ts",
-          "line": 3,
-          "column": 1
+          "id": "b2fa1060bd01c437a9d8-cf028870e0644f2f36ac",
+          "file": "otherRegTest.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "test succeed auth",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30068,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Projects\\FermNode\\pages\\main.page.ts",
+                        "column": 21,
+                        "line": 22
+                      },
+                      "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://test.dev.copaltd.services/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\main.page.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://test.dev.copaltd.services/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Добре'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\n\u001b[2m    at FermMainPage.goto (C:\\Projects\\FermNode\\pages\\main.page.ts:22:21)\u001b[22m\n\u001b[2m    at C:\\Projects\\FermNode\\tests\\otherRegTest.spec.ts:6:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-05-24T13:32:36.298Z",
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2fa1060bd01c437a9d8-e36c1cb0ac1f17a87e83",
+          "file": "otherRegTest.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "test succeed auth",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "timedOut",
+                  "duration": 30044,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Projects\\FermNode\\pages\\main.page.ts",
+                        "column": 21,
+                        "line": 22
+                      },
+                      "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://test.dev.copaltd.services/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\main.page.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://test.dev.copaltd.services/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Добре'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\n\u001b[2m    at FermMainPage.goto (C:\\Projects\\FermNode\\pages\\main.page.ts:22:21)\u001b[22m\n\u001b[2m    at C:\\Projects\\FermNode\\tests\\otherRegTest.spec.ts:6:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-05-24T13:32:36.441Z",
+                  "attachments": []
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2fa1060bd01c437a9d8-31b5b624bdf88ccb7660",
+          "file": "otherRegTest.spec.ts",
+          "line": 4,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-05-24T10:03:05.221Z",
-    "duration": 2636.8069999963045,
-    "expected": 1,
+    "startTime": "2024-05-24T13:32:33.308Z",
+    "duration": 39123.299,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 3,
     "flaky": 0
   }
 }
