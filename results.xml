@@ -1,6 +1,86 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="2.6368069999963044">
-<testsuite name="api\getFeature.spec.ts" timestamp="2024-05-24T10:03:06.569Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.299" errors="0">
-<testcase name="should get all fetures" classname="api\getFeature.spec.ts" time="0.299">
+<testsuites id="" name="" tests="3" failures="3" skipped="0" errors="0" time="39.123298999999996">
+<testsuite name="otherRegTest.spec.ts" timestamp="2024-05-24T13:32:33.412Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.07" errors="0">
+<testcase name="test succeed auth" classname="otherRegTest.spec.ts" time="30.07">
+<failure message="otherRegTest.spec.ts:4:5 test succeed auth" type="FAILURE">
+<![CDATA[  [chromium] › otherRegTest.spec.ts:4:5 › test succeed auth ────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "https://test.dev.copaltd.services/", waiting until "load"
+
+
+       at ..\pages\main.page.ts:22
+
+      20 |
+      21 |   async goto() {
+    > 22 |     await this.page.goto('https://test.dev.copaltd.services/');
+         |                     ^
+      23 |     await this.page.getByRole('link', { name: 'Добре' }).click();
+      24 |   }
+      25 |
+
+        at FermMainPage.goto (C:\Projects\FermNode\pages\main.page.ts:22:21)
+        at C:\Projects\FermNode\tests\otherRegTest.spec.ts:6:22
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="otherRegTest.spec.ts" timestamp="2024-05-24T13:32:33.412Z" hostname="firefox" tests="1" failures="1" skipped="0" time="30.068" errors="0">
+<testcase name="test succeed auth" classname="otherRegTest.spec.ts" time="30.068">
+<failure message="otherRegTest.spec.ts:4:5 test succeed auth" type="FAILURE">
+<![CDATA[  [firefox] › otherRegTest.spec.ts:4:5 › test succeed auth ─────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://test.dev.copaltd.services/", waiting until "load"
+
+
+       at ..\pages\main.page.ts:22
+
+      20 |
+      21 |   async goto() {
+    > 22 |     await this.page.goto('https://test.dev.copaltd.services/');
+         |                     ^
+      23 |     await this.page.getByRole('link', { name: 'Добре' }).click();
+      24 |   }
+      25 |
+
+        at FermMainPage.goto (C:\Projects\FermNode\pages\main.page.ts:22:21)
+        at C:\Projects\FermNode\tests\otherRegTest.spec.ts:6:22
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="otherRegTest.spec.ts" timestamp="2024-05-24T13:32:33.412Z" hostname="webkit" tests="1" failures="1" skipped="0" time="30.044" errors="0">
+<testcase name="test succeed auth" classname="otherRegTest.spec.ts" time="30.044">
+<failure message="otherRegTest.spec.ts:4:5 test succeed auth" type="FAILURE">
+<![CDATA[  [webkit] › otherRegTest.spec.ts:4:5 › test succeed auth ──────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "https://test.dev.copaltd.services/", waiting until "load"
+
+
+       at ..\pages\main.page.ts:22
+
+      20 |
+      21 |   async goto() {
+    > 22 |     await this.page.goto('https://test.dev.copaltd.services/');
+         |                     ^
+      23 |     await this.page.getByRole('link', { name: 'Добре' }).click();
+      24 |   }
+      25 |
+
+        at FermMainPage.goto (C:\Projects\FermNode\pages\main.page.ts:22:21)
+        at C:\Projects\FermNode\tests\otherRegTest.spec.ts:6:22
+]]>
+</failure>
 </testcase>
 </testsuite>
 </testsuites>
